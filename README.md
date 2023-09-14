@@ -31,6 +31,19 @@ Market risk assessment encompasses a wide range of computations, from simple sta
 - **Heterogeneous System Support:** Market risk assessment often involves heterogeneous systems, including GPUs, CPUs, and specialized accelerators. Mojo's support for heterogeneous systems allows it to leverage the full potential of these hardware components, delivering superior performance and efficiency.
 
 - **Scalability:** Mojo's adaptability and efficient resource utilization make it highly scalable. This scalability is essential for financial institutions dealing with growing datasets and increasingly complex risk assessment tasks.
+- Certainly, here are 5 key technical advantages of Mojo based on the provided information:
+
+1. **Optimized for HPC Accelerators**: Mojo is designed to target accelerators and heterogeneous systems commonly used in the HPC field. It can efficiently leverage specialized hardware accelerators like GPUs, AI ASICs, quantum computing systems, FPGAs, and custom silicon, making it well-suited for HPC applications.
+
+2. **High-Performance Compiler Technology**: Unlike traditional compiler technologies such as LLVM and GCC, Mojo leverages MLIR (Multi-Level Intermediate Representation), which is specifically designed for modern chip architectures and is widely adopted in the machine learning accelerator community, which uses HPC. Mojo is uniquely powerful for writing systems-level code for HPC workloads, thanks to its alignment with MLIR.
+
+3. **Python Compatibility**: Mojo aims to be fully compatible with the Python ecosystem. It allows you to import existing Python modules (and CPython) and use them in Mojo programs seamlessly. This compatibility makes it easier for developers to transition to Mojo and leverage existing Python code and packages.
+
+4. **Unified Language for Systems Programming**: Mojo addresses the "two-world problem" often faced in Python, where Python is excellent for high-level programming but not suitable for systems programming. Mojo combines Python's ease of use with low-level control, making it a unified language for both high-level and systems-level coding.
+
+5. **Superset of Python**: Mojo's goal is to be a superset of Python, which means it retains Python's familiar syntax while introducing new features and capabilities for systems programming. This approach simplifies the migration of Python code to Mojo and ensures a smooth transition for developers.
+
+These advantages position Mojo as a promising language for HPC applications, offering compatibility with the Python (along with C) ecosystem, efficient support for accelerators, and a unified platform for both high-level and systems-level coding.
 
 ### 3. Use Cases
 
@@ -114,7 +127,8 @@ Mojo's hallmark traits, including its adaptability, scalability, and computation
 To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
 
 ### 4.1. Matrix Multiplication Performance Comparison
-
+TODO : Format table and add more data and diagram
+ 
 | Matrix Size (NxN)  | Standard CPU (Time, s) | Mojo-Optimized CPU (Time, s) | Mojo GPU (Time, s) | Percentage Improvement (CPU to GPU) |
 |--------------------|-------------------------|------------------------------|-------------------|------------------------------------|
 | 128x
@@ -132,9 +146,9 @@ To assess the scalability of Mojo in market risk assessment, we conducted experi
 
 ## 5. Conclusion
 
-The financial industry's reliance on computational applications for market risk assessment necessitates innovative solutions to address the limitations of traditional CPU technologies. Mojo, with its unique features such as compile-time metaprogramming, adaptive compilation, efficient register allocation, and heterogeneous system support, presents a powerful solution to enhance the performance and scalability of market risk assessments.
+The financial industry's reliance on HPC computational applications innovative solutions to address the limitations of traditional CPU technologies. Mojo, with its unique features such as compile-time metaprogramming, adaptive compilation, efficient register allocation, and heterogeneous system support, presents a powerful solution to enhance the performance and scalability of market risk assessments.
 
-By deploying Mojo on Amazon G4dn instances featuring NVIDIA T4 GPUs, financial institutions can achieve enhanced scalability, cost-effectiveness, and high performance. This combination of technologies revolutionizes market risk assessment, enabling timely and accurate risk analysis and better-informed decision-making in the ever-evolving financial landscape. Mojo, when integrated with Amazon G4dn instances and NVIDIA T4 GPUs, represents a formidable alliance poised to transform market risk assessment in the financial industry.
+By deploying Mojo on Amazon G4dn instances featuring NVIDIA T4 GPUs, financial institutions can achieve enhanced scalability, cost-effectiveness, and high performance. This combination of technologies revolutionizes market risk assessment, enabling timely and accurate risk analysis and better-informed decision-making in the ever-evolving financial landscape. Mojo, when integrated with Amazon G4dn instances and NVIDIA T4 GPUs, represents a formidable alliance poised to transform HPC risk assessment in the financial industry.
 
 ## 6. Acknowledgments
 
