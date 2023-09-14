@@ -2,7 +2,7 @@
 
 ## Abstract
 
-The financial industry heavily relies on computational applications for busiess, but these applications often face challenges as this high performance applications use outdated CPU technology. This research paper explores the potential of utilizing the Mojo programming language to optimize critical financial computations. Mojo, with its innovative features such as powerful compile-time metaprogramming, integration of adaptive compilation techniques, and support for heterogeneous systems, presents a novel solution to these challenges. Furthermore, we investigate the scalability of this solution by deploying it on multiple  AWS EC2 C6i (c6i.8xlarge), known for their cost-effectiveness, high performance, and GPU optimization capabilities.
+The financial industry heavily relies on computational applications for busiess, but thGese applications often face challenges as this high performance applications use outdated CPU technology. This research paper explores the potential of utilizing the Mojo programming language to optimize critical financial computations. Mojo, with its innovative features such as powerful compile-time metaprogramming, integration of adaptive compilation techniques, and support for heterogeneous systems, presents a novel solution to these challenges. Furthermore, we investigate the scalability of this solution by deploying it on multiple  AWS EC2 C6i (c6i.8xlarge), known for their cost-effectiveness and high performance capabilities.
 
 ## 1. Introduction
 
@@ -59,7 +59,7 @@ Efficient portfolio optimization is pivotal for proactive risk management. Here,
 
 ### 3.3. Real-time Risk Assessment
 
-The banking realm demands real-time risk assessment, responding swiftly to ever-fluctuating market conditions. Mojo's adaptability coupled with its seamless integration with Amazon G4dn instances featuring NVIDIA T4 GPUs facilitate instantaneous risk assessment with minimal latency. The outcome is immediate and informed decision-making even in the face of volatile market shifts.
+The banking realm demands real-time risk assessment, responding swiftly to ever-fluctuating market conditions. Mojo's adaptability coupled with its seamless integration with Amazon cloud facilitate instantaneous risk assessment with minimal latency. The outcome is immediate and informed decision-making even in the face of volatile market shifts.
 
 ### 3.4. Stress Testing and Scenario Analysis
 
