@@ -1,8 +1,8 @@
-# Revolutionizing HPC Performance using Amazon NVIDIA and Modular language - Case study for banking sector
+# Revolutionizing HPC Performance using Amazon Cloud and Modular language - Case study for banking sector
 
 ## Abstract
 
-The financial industry heavily relies on computational applications for busiess, but these applications often face challenges as this high performance applications use outdated CPU technology. This research paper explores the potential of utilizing the Mojo programming language to optimize critical financial computations. Mojo, with its innovative features such as powerful compile-time metaprogramming, integration of adaptive compilation techniques, and support for heterogeneous systems, presents a novel solution to these challenges. Furthermore, we investigate the scalability of this solution by deploying it on multiple Amazon G4dn instances, each equipped with NVIDIA T4 GPUs, known for their cost-effectiveness, high performance, and GPU optimization capabilities.
+The financial industry heavily relies on computational applications for busiess, but these applications often face challenges as this high performance applications use outdated CPU technology. This research paper explores the potential of utilizing the Mojo programming language to optimize critical financial computations. Mojo, with its innovative features such as powerful compile-time metaprogramming, integration of adaptive compilation techniques, and support for heterogeneous systems, presents a novel solution to these challenges. Furthermore, we investigate the scalability of this solution by deploying it on multiple  AWS EC2 C6i (c6i.8xlarge), known for their cost-effectiveness, high performance, and GPU optimization capabilities.
 
 ## 1. Introduction
 
@@ -127,7 +127,7 @@ Mojo's hallmark traits, including its adaptability, scalability, and computation
 To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
 
 ### 4.1. Matrix Multiplication Performance Comparison
-ollowing benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost 2. However, they do not have a GPU 3.
+ollowing benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost
 
 Python 
 128*128 Python 0.0022687657772804937 GFLOP/s
@@ -169,7 +169,7 @@ To assess the scalability of Mojo in market risk assessment, we conducted experi
 
 The financial industry's reliance on HPC computational applications innovative solutions to address the limitations of traditional CPU technologies. Mojo, with its unique features such as compile-time metaprogramming, adaptive compilation, efficient register allocation, and heterogeneous system support, presents a powerful solution to enhance the performance and scalability of market risk assessments.
 
-By deploying Mojo on Amazon G4dn instances featuring NVIDIA T4 GPUs, financial institutions can achieve enhanced scalability, cost-effectiveness, and high performance. This combination of technologies revolutionizes market risk assessment, enabling timely and accurate risk analysis and better-informed decision-making in the ever-evolving financial landscape. Mojo, when integrated with Amazon G4dn instances and NVIDIA T4 GPUs, represents a formidable alliance poised to transform HPC risk assessment in the financial industry.
+By deploying Mojo on AWS EC2 C6i (c6i.8xlarge), financial institutions can achieve enhanced scalability, cost-effectiveness, and high performance. This combination of technologies revolutionizes market risk assessment, enabling timely and accurate risk analysis and better-informed decision-making in the ever-evolving financial landscape. Mojo, when integrated with AWS EC2 C6i (c6i.8xlarge), represents a formidable alliance poised to transform HPC risk assessment in the financial industry.
 
 ## 6. Acknowledgments
 
@@ -181,7 +181,7 @@ The authors of this research paper would like to acknowledge the invaluable supp
 
 [2] Amazon G4dn Instances. Available online: [Amazon G4dn Instances](https://aws.amazon.com/ec2/instance-types/g4/)
 
-[3] NVIDIA T4 GPU. Available online: [NVIDIA T4 GPU](https://www.nvidia.com/en-gb/data-center/tesla-t4/)
+[3] Amazon EC2 C6i. Available online: [((https://aws.amazon.com/ec2/instance-types/c6i/))
 
 ## 8. Contact Information
 
