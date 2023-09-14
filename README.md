@@ -127,18 +127,39 @@ Mojo's hallmark traits, including its adaptability, scalability, and computation
 To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
 
 ### 4.1. Matrix Multiplication Performance Comparison
-TODO : Format table and add more data and diagram
- 
-| Matrix Size (NxN)  | Standard CPU (Time, s) | Mojo-Optimized CPU (Time, s) | Mojo GPU (Time, s) | Percentage Improvement (CPU to GPU) |
-|--------------------|-------------------------|------------------------------|-------------------|------------------------------------|
-| 128x
+ollowing benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost 2. However, they do not have a GPU 3.
 
-128            | 2.15                    | 1.08                         | 0.25              | 77.91%                             |
-| 256x256            | 17.42                   | 5.82                         | 0.75              | 95.69%                             |
-| 512x512            | 139.81                  | 28.17                        | 2.45              | 98.24%                             |
-| 1024x1024          | 1127.15                 | 128.33                       | 8.72              | 99.23%                             |
+Python 
+128*128 Python 0.0022687657772804937 GFLOP/s
 
-These experimental results demonstrate the significant performance improvements achieved by Mojo in matrix multiplication, both on CPU and GPU. The Mojo-optimized CPU implementations outperform standard CPU implementations, while Mojo on GPUs exhibits remarkable speedups, with percentage improvements exceeding 95%.
+Mojo Benchmark (no changes):
+0.010313605097441407 GFLOP/s, a 4.5459100276997466 x speedup over Python
+
+Using Mojo optimization (Mojo the types of the inputs, it can optimize much of the code away and reduce dispatching costs)
+3.8215698153856121 GFLOP/s, a 1684.4267723248283 x speedup over Python
+
+(Matrix size 512x512)
+Using Mojo optimization (utilizing the vector instructions - Leverage SIMD instructions)
+16.832111828715377 GFLOP/s, a 7419.0610583396401 x speedup over Python
+
+Using Mojo optimization (use built in vectorization)
+15.625359426022007 GFLOP/s, a 6887.1628717670847 x speedup over Python
+
+Using Mojo optimization (utilize all cores - parallel processing)
+3.371636411064149 GFLOP/s, a 1486.1103974803584 x speedup over Python
+
+Using Mojo optimization (Tiling is an optimization performed for matmul to increase cache locality)
+3.2055731966172152 GFLOP/s, a 1412.9149992995956 x speedup over Python
+
+Unrolled and unparalleled vector loop
+3.226010652312703 GFLOP/s, a 1421.9231815897858 x speedup over Python
+
+matmul_evaluator, number of candidates:  6
+Optimizing for size: 512 x 512 x 512
+Time spent in matmul_evaluator, ms: 7208
+Best candidate idx: 5
+3.1530823552091505 GFLOP/s, a 1389.7787011705821 x speedup over Python
+
 
 ### 4.2. Scalability Analysis
 
