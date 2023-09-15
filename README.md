@@ -128,7 +128,7 @@ To evaluate the performance enhancements achieved through Mojo in market risk as
 
 ### 4.1. Matrix Multiplication Performance Comparison
 
-
+![Alt text]([http://full/path/to/img.jpg](https://ibb.co/kcR2hPJ) "perf")
 ### 4.2. Scalability Analysis
 
 To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
