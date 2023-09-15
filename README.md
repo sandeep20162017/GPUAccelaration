@@ -134,7 +134,7 @@ Following benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazo
 
 To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
 
-![Alt text](result_mat_mul.PNG?raw=true "Benchmark")
+![Alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/result_mat_mul.PNG)?raw=true "Benchmark")
 
 
 ## 5. Conclusion
