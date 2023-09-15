@@ -2,11 +2,14 @@
 
 ## Abstract
 
-The financial industry heavily relies on computational applications for busiess, but thGese applications often face challenges as this high performance applications use outdated CPU technology. This research paper explores the potential of utilizing the Mojo programming language to optimize critical financial computations. Mojo, with its innovative features such as powerful compile-time metaprogramming, integration of adaptive compilation techniques, and support for heterogeneous systems, presents a novel solution to these challenges. Furthermore, we investigate the scalability of this solution by deploying it on multiple  AWS EC2 C6i (c6i.8xlarge), known for their cost-effectiveness and high performance capabilities.
+The financial industry, especially in the context of market risk assessment, relies heavily on computational applications. Many of these applications have traditionally been built on older CPU technology, which limits their performance capabilities. To compensate for this limitation, financial institutions like BMO often resort to purchasing licenses for third-party grid applications such as SGE (Sun Grid Engine) and Data Synapse. Additionally, high-performance computing (HPC) applications used in this domain are typically developed using the GCC (GNU Compiler Collection), which lacks support for newer hardware technologies like GPUs (Graphics Processing Units) or TPUs (Tensor Processing Units). This research explores the challenges and opportunities in optimizing high compute applications, a fundamental operation in financial computing, using the Mojo programming language. Mojo offers a new approach to addressing the computational demands of market risk assessment by leveraging compile-time metaprogramming, adaptive compilation techniques, and support for heterogeneous systems, including accelerators.
 
 ## 1. Introduction
 
-The financial industry's dependence on computational applications for vaious applications necessitates innovative solutions to overcome the limitations of traditional CPU technologies. While numerous financial institutions have resorted to third-party grid applications and high-performance computing (HPC) solutions to address these challenges, they still encounter several limitations. In this section, we will discuss some of the key limitations:
+The financial industry's dependence on computational applications for vaious applications necessitates innovative solutions to overcome the limitations of traditional CPU technologies. While numerous financial institutions have resorted to third-party grid applications and high-performance computing (HPC) solutions to address these challenges, they still encounter several limitations.
+Furthermore, as the need for faster calculations grows, financial institutions seek ways to harness the power of modern hardware accelerators like GPUs and TPUs. However, existing programming languages like GCC lack native support for these hardware accelerators, making it challenging to leverage their full potential.
+
+In this section, we will discuss some of the key limitations:
 
 - **Performance Bottlenecks:** Legacy CPU technology often struggles to keep up with the computational demands of market risk assessment, leading to significant performance bottlenecks.
 
