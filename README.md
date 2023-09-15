@@ -127,9 +127,10 @@ Mojo's hallmark traits, including its adaptability, scalability, and computation
 To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
 
 ### 4.1. Matrix Multiplication Performance Comparison
-result_mat_mul.PNG
+Following benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost.
+
 ![Alt text](result_mat_mul.PNG?raw=true "Benchmark")
-![Alt text]([https://ibb.co/kcR2hPJ "perf")
+
 ### 4.2. Scalability Analysis
 
 To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
