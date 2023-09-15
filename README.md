@@ -132,11 +132,10 @@ To evaluate the performance enhancements achieved through Mojo in market risk as
 ### 4.1. Matrix Multiplication Performance Comparison
 Following benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost.
 
+To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
+
 ![Alt text](result_mat_mul.PNG?raw=true "Benchmark")
 
-### 4.2. Scalability Analysis
-
-To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
 
 ## 5. Conclusion
 
