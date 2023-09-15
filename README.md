@@ -127,7 +127,8 @@ Mojo's hallmark traits, including its adaptability, scalability, and computation
 To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
 
 ### 4.1. Matrix Multiplication Performance Comparison
-
+result_mat_mul.PNG
+![Alt text](result_mat_mul.PNG?raw=true "Benchmark")
 ![Alt text]([https://ibb.co/kcR2hPJ "perf")
 ### 4.2. Scalability Analysis
 
