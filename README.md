@@ -130,11 +130,18 @@ Mojo's hallmark traits, including its adaptability, scalability, and computation
 To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
 
 ### 4.1. Matrix Multiplication Performance Comparison
+Matrix multiplication is a fundamental operation in many financial computations. Given two dense matrices 𝐴 and 𝐵 of dimensions 𝑀×𝐾 and 𝐾×𝑁, respectively, the goal is to compute their dot product 𝐶=𝐴.𝐵, also known as matmul. The dot product is defined as:
+
+𝐶𝑖,𝑗+=∑𝑘∈[0⋯𝐾)𝐴𝑖,𝑘𝐵𝑘,𝑗
+
+We will explore the optimization of this operation using Mojo and report the achieved GFlops (GigaFLOPS) as a performance metric.
+
 Following benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost.
 
 To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
 
-![Alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/result_mat_mul.PNG)?raw=true "Benchmark")
+![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/result_mat_mul.PNG?raw=true)
+
 
 
 ## 5. Conclusion
