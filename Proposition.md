@@ -1,52 +1,51 @@
-# Revolutionizing HPC Performance using Amazon Cloud,  Modular language - Case study for banking sector
+**Title:** Advancing Financial Computational Efficiency: A Comparative Study of Native CPU Compilation vs. Amazon Cloud (NVIDIA GPU) Utilization
 
-## Abstract
+**Abstract:**
 
-The financial industry, especially in the context of market risk assessment, relies heavily on computational applications. Many of these applications have traditionally been built on older CPU technology, which limits their performance capabilities. To compensate for this limitation, financial institutions like BMO often resort to purchasing licenses for third-party grid applications such as SGE (Sun Grid Engine) and Data Synapse. Additionally, high-performance computing (HPC) applications used in this domain are typically developed using the GCC (GNU Compiler Collection), which lacks support for newer hardware technologies like GPUs (Graphics Processing Units) or TPUs (Tensor Processing Units). This research explores the challenges and opportunities in optimizing high compute applications, a fundamental operation in financial computing, using the Mojo programming language. Mojo offers a new approach to addressing the computational demands of market risk assessment by leveraging compile-time metaprogramming, adaptive compilation techniques, and support for heterogeneous systems, including accelerators.
+The financial sector, especially in the context of market risk assessment, heavily relies on computational applications. However, many of these applications are traditionally built on outdated CPU technology, leading to performance limitations. To address these limitations, financial institutions often resort to purchasing licenses for third-party grid applications like SGE (Sun Grid Engine) and Data Synapse. Additionally, high-performance computing (HPC) applications in this domain are typically developed using tools like the GCC (GNU Compiler Collection) or Windows C#, which lack support for advanced hardware technologies such as GPUs (Graphics Processing Units) or TPUs (Tensor Processing Units).
 
-## 1. Introduction
+This research explores the challenges and opportunities in optimizing high-compute applications in financial computing. It investigates the utilization of NVIDIA CUDA on AWS GPU instances to overcome these challenges and improve performance significantly. The study focuses on performance benchmark comparisons between native CPU compilation and the substantial performance gains achieved through the utilization of Amazon Cloud (NVIDIA GPU) infrastructure, without the need for a modular language or Mojo.
+## 2. Accelerating High-Performance Computing with GPUs on AWS
 
-The financial industry's dependence on computational applications for vaious applications necessitates innovative solutions to overcome the limitations of traditional CPU technologies. While numerous financial institutions have resorted to third-party grid applications and high-performance computing (HPC) solutions to address these challenges, they still encounter several limitations.
-Furthermore, as the need for faster calculations grows, financial institutions seek ways to harness the power of modern hardware accelerators like GPUs and TPUs. However, existing programming languages like GCC lack native support for these hardware accelerators, making it challenging to leverage their full potential.
+**GPU Architecture Overview:**
 
-In this section, we will discuss some of the key limitations:
+1. **Number of Cores:** Modern GPUs are designed with a massive number of cores, which are individual processing units responsible for executing tasks in parallel. These cores are organized into streaming multiprocessors (SMs) or compute units. For example, NVIDIA's high-end GPUs can have thousands of CUDA cores within multiple SMs.
 
-- **Performance Bottlenecks:** Legacy CPU technology often struggles to keep up with the computational demands of market risk assessment, leading to significant performance bottlenecks.
+2. **Memory Hierarchy:** GPU architecture includes multiple levels of memory hierarchy to efficiently manage data access:
+   - **Global Memory:** This is the primary memory pool accessible by all cores. It stores data used by the entire GPU and has a relatively large capacity.
+   - **Shared Memory:** Shared memory is a small, high-speed memory pool that can be accessed by threads within the same thread block. It is used for fast data sharing between threads.
+   - **L1 and L2 Cache:** GPUs often have cache levels (L1 and L2) to reduce memory latency. These caches store frequently accessed data and instructions, accelerating memory access.
 
-- **Inefficient Resource Utilization:** Traditional CPU-based applications may not efficiently utilize modern hardware technologies, including GPUs, leading to underutilization of available computational resources.
+3. **Memory Bandwidth:** GPUs are equipped with high-memory bandwidth, which refers to the rate at which data can be read from or written to memory. This high memory bandwidth is crucial for handling large datasets efficiently.
 
-- **Scalability Issues:** As datasets and computational requirements grow, traditional CPU-based solutions may face scalability issues, hindering their ability to handle large-scale market risk assessments effectively.
+**Contribution to GPU's Computational Power:**
 
-- **Complexity:** Market risk assessment involves intricate computations, and the complexity of these calculations can lead to longer processing times and increased resource consumption.
+1. **Parallelism:** The abundance of cores in a GPU enables massive parallelism. Each core can perform its calculations independently, allowing the GPU to handle thousands of parallel threads simultaneously. This parallelism is particularly advantageous for tasks like matrix multiplication, where many calculations can be executed concurrently, leading to significant speedup.
 
-This research paper explores how the Mojo programming language, with its unique features and capabilities, can address these limitations and enhance market risk assessment processes.
+2. **Memory Hierarchy:** The memory hierarchy ensures efficient data access. Global memory provides a large storage capacity for data, while shared memory and caches reduce memory latency. This hierarchy minimizes the time cores spend waiting for data and maximizes computational throughput.
 
-## 2. Mojo: Advantages for High-Performance Market Risk Assessment
+3. **Data-Parallel Processing:** GPUs are optimized for data-parallel processing, where the same operation is applied to multiple data elements simultaneously. This makes them well-suited for tasks that involve applying the same mathematical operations to large arrays or matrices, such as those encountered in financial computations.
 
-Market risk assessment encompasses a wide range of computations, from simple statistical analyses to complex simulations. Mojo's distinctive features make it an ideal candidate for optimizing these computations:
+4. **Specialized Hardware Units:** Modern GPUs may include specialized hardware units like Tensor Cores for accelerating specific types of computations, such as tensor operations commonly used in deep learning. These units further enhance computational power for specific workloads.
 
-- **Powerful Compile-Time Metaprogramming:** Mojo empowers developers with powerful compile-time metaprogramming capabilities, allowing the creation of specialized implementations of functions tailored to specific use cases. This feature can significantly improve the performance of critical financial calculations, such as Value at Risk (VaR) and Conditional Value at Risk (CVaR) computations.
+5. **High Memory Bandwidth:** The high memory bandwidth ensures that data can be fetched and processed quickly, reducing the time cores spend idle due to memory bottlenecks. This is crucial for tasks involving extensive data manipulation, such as matrix multiplications and complex financial calculations.
 
-- **Integration of Adaptive Compilation Techniques:** Mojo's adaptive compilation techniques enable it to generate optimized code dynamically, adapting to the requirements of the task at hand. This adaptability is crucial for market risk assessment, where the computational workload varies based on factors like the size of the portfolio and the complexity of risk simulations.
+## 4. Experimental Results
 
-- **Efficient Register Allocation:** Mojo excels in optimizing memory access and reducing cache misses, a critical factor when dealing with extensive datasets in market risk assessment. Efficient register allocation ensures that data fetch times are minimized, leading to accelerated calculations.
+To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
 
-- **Heterogeneous System Support:** Market risk assessment often involves heterogeneous systems, including GPUs, CPUs, and specialized accelerators. Mojo's support for heterogeneous systems allows it to leverage the full potential of these hardware components, delivering superior performance and efficiency.
+### 4.1. Matrix Multiplication Performance Comparison
+Matrix multiplication is a fundamental operation in many financial computations. Given two dense matrices 𝐴 and 𝐵 of dimensions 𝑀×𝐾 and 𝐾×𝑁, respectively, the goal is to compute their dot product 𝐶=𝐴.𝐵, also known as matmul. The dot product is defined as:
 
-- **Scalability:** Mojo's adaptability and efficient resource utilization make it highly scalable. This scalability is essential for financial institutions dealing with growing datasets and increasingly complex risk assessment tasks.
-- Certainly, here are 5 key technical advantages of Mojo based on the provided information:
+𝐶𝑖,𝑗+=∑𝑘∈[0⋯𝐾)𝐴𝑖,𝑘𝐵𝑘,𝑗
 
-1. **Optimized for HPC Accelerators**: Mojo is designed to target accelerators and heterogeneous systems commonly used in the HPC field. It can efficiently leverage specialized hardware accelerators like GPUs, AI ASICs, quantum computing systems, FPGAs, and custom silicon, making it well-suited for HPC applications.
+We will explore the optimization of this operation using Mojo and report the achieved GFlops (GigaFLOPS) as a performance metric.
 
-2. **High-Performance Compiler Technology**: Unlike traditional compiler technologies such as LLVM and GCC, Mojo leverages MLIR (Multi-Level Intermediate Representation), which is specifically designed for modern chip architectures and is widely adopted in the machine learning accelerator community, which uses HPC. Mojo is uniquely powerful for writing systems-level code for HPC workloads, thanks to its alignment with MLIR.
+Following benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost.
 
-3. **Python Compatibility**: Mojo aims to be fully compatible with the Python ecosystem. It allows you to import existing Python modules (and CPython) and use them in Mojo programs seamlessly. This compatibility makes it easier for developers to transition to Mojo and leverage existing Python code and packages.
+To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
 
-4. **Unified Language for Systems Programming**: Mojo addresses the "two-world problem" often faced in Python, where Python is excellent for high-level programming but not suitable for systems programming. Mojo combines Python's ease of use with low-level control, making it a unified language for both high-level and systems-level coding.
-
-5. **Superset of Python**: Mojo's goal is to be a superset of Python, which means it retains Python's familiar syntax while introducing new features and capabilities for systems programming. This approach simplifies the migration of Python code to Mojo and ensures a smooth transition for developers.
-
-These advantages position Mojo as a promising language for HPC applications, offering compatibility with the Python (along with C) ecosystem, efficient support for accelerators, and a unified platform for both high-level and systems-level coding.
+![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/result_mat_mul.PNG?raw=true)
 
 ### 3. Use Cases
 
@@ -124,23 +123,6 @@ By embracing Mojo's metaprogramming capabilities, efficient memory management, a
 Meeting stringent regulatory requirements is a paramount obligation for banks. These often involve intricate data analysis and extensive reporting. Mojo's resource-efficient operation and scalability equip banks to navigate regulatory compliance demands deftly. It ensures that compliance is met with optimum resource utilization, minimizing operational overhead.
 
 Mojo's hallmark traits, including its adaptability, scalability, and computational prowess, render it a versatile solution for an extensive array of HPC applications in the banking sector. By harnessing Mojo's capabilities and harnessing the potential of modern GPU technologies, financial institutions can elevate their computational prowess, augment decision-making processes, and maintain a competitive edge in the dynamic financial landscape.
-
-## 4. Experimental Results
-
-To evaluate the performance enhancements achieved through Mojo in market risk assessment, we conducted a series of experiments focusing on optimizing matrix multiplication—a fundamental operation in financial computing. The results presented below highlight the impact of Mojo on performance and scalability:
-
-### 4.1. Matrix Multiplication Performance Comparison
-Matrix multiplication is a fundamental operation in many financial computations. Given two dense matrices 𝐴 and 𝐵 of dimensions 𝑀×𝐾 and 𝐾×𝑁, respectively, the goal is to compute their dot product 𝐶=𝐴.𝐵, also known as matmul. The dot product is defined as:
-
-𝐶𝑖,𝑗+=∑𝑘∈[0⋯𝐾)𝐴𝑖,𝑘𝐵𝑘,𝑗
-
-We will explore the optimization of this operation using Mojo and report the achieved GFlops (GigaFLOPS) as a performance metric.
-
-Following benchmarks are generated on AWS EC2 C6i (c6i.8xlarge) instances. Amazon EC2 C6i instances are compute-optimized instances powered by 3rd Generation Intel Xeon Scalable processors 1. They are designed to provide an excellent balance of compute resources and cost.
-
-To assess the scalability of Mojo in market risk assessment, we conducted experiments involving large portfolio simulations. The results indicate that Mojo's adaptability and efficient resource utilization enable linear scalability as the size of the portfolio and the complexity of simulations increase.
-
-![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/result_mat_mul.PNG?raw=true)
 
 
 
