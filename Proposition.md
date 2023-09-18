@@ -194,7 +194,7 @@ The authors of this technical  paper would like to acknowledge the invaluable su
 
 **References**
 
-atanzaro B., Sundaram N., Keutzer K.: ‘Fast support vector machine training and classification on graphics processors’. Int. Conf. on Machine Learning, Helsinki, Finland
+Catanzaro B., Sundaram N., Keutzer K.: ‘Fast support vector machine training and classification on graphics processors’. Int. Conf. on Machine Learning, Helsinki, Finland
 
 Nurvitadhi E., Mishra A., Marr D.: ‘A sparse matrix vector multiply accelerator for support vector machine’. IEEE Int. Conf. on Compilers, Architecture and Synthesis for Embedded Systems, Amsterdam, Netherlands
 
@@ -210,10 +210,9 @@ Amazon G4dn Instances. Available online: [Amazon G4dn Instances](https://aws.ama
 
 For inquiries related to this study/POC paper, please contact:
 
-- [Sandeep Kanao]
-- [Sandeep.kanao@gmail.com]
-  - [Salabh Kumar Saxena]
-- [Salabh.Saxena@gmail.com]
+ [Sandeep Kanao]  [Sandeep.kanao@gmail.com]
+ 
+ [Salabh Kumar Saxena]   [Salabh.Saxena@gmail.com]
 
 *Note: The full contact information of the authors is provided but has been omitted for this public document.*
 ---
