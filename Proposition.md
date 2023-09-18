@@ -108,6 +108,43 @@ Matrix multiplication is a fundamental operation in many financial computations.
 
 **Single-core CPU and GPU:**
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .legend {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .cpu {
+            width: 20px;
+            height: 2px;
+            background-color: green;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        .gpu {
+            width: 20px;
+            height: 2px;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="legend">
+        <div class="cpu"></div>
+        CPU
+    </div>
+    <div class="legend">
+        <div class="gpu"></div>
+        GPU
+    </div>
+</body>
+</html>
+
+
 ![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/1-GPU%20and%20single-core%20CPU.png?raw=true)
 
 
