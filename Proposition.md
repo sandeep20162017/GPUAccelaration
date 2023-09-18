@@ -7,6 +7,7 @@ The financial sector, especially in the context of market risk assessment, heavi
 This study explores the challenges and opportunities in optimizing high-compute applications in financial computing. It investigates the utilization of NVIDIA CUDA on AWS GPU instances to overcome these challenges and improve performance significantly. The study focuses on performance benchmark comparisons between native CPU compilation and the substantial performance gains achieved through the utilization of Amazon Cloud (NVIDIA GPU) infrastructure.
 
 **GPU Architecture Overview:**
+
 GPUs excel in throughput, with their SIMT architecture, hundreds of stream processors (SPs) per stream multiprocessor (SM), and shared resources. This design, emphasizing execution units, results in high data throughput and energy efficiency. 
 In contrast, CPUs prioritize low-latency calculations and rely on complex control units and large caches, leading to fewer execution units and smaller data throughput. CPU's design requires mechanisms for cache hit rate and data consistency.
 
@@ -46,21 +47,60 @@ Python itself does not directly support CUDA or cuBLAS, as these are low-level l
 However, there are Python libraries and frameworks that provide bindings or interfaces to CUDA and cuBLAS to enable GPU acceleration in Python-based applications. Some of these libraries include: PyCUDA, CuPy, TensorFlow and PyTorch
 
 **Experimental Results – Matrix Multiplication Benchmarks:**
-Server information
-Compute
-Value
-vCPUs	4
-Memory (GiB)	16.0
-Memory per vCPU (GiB)	4.0
-Physical Processor	Intel Xeon Family
-Clock Speed (GHz)	2.5
-CPU Architecture	x86_64
-GPU	1
-GPU Architecture	nvidia t4 tensor core
-Video Memory (GiB)	16
-GPU Compute Capability (?)
-7.5
-FPGA	0
+
+**Server information:** 
+
+<table border="1">
+    <tr>
+        <th>Compute</th>
+        <th>Value</th>
+    </tr>
+    <tr>
+        <td>vCPUs</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>Memory (GiB)</td>
+        <td>16.0</td>
+    </tr>
+    <tr>
+        <td>Memory per vCPU (GiB)</td>
+        <td>4.0</td>
+    </tr>
+    <tr>
+        <td>Physical Processor</td>
+        <td>Intel Xeon Family</td>
+    </tr>
+    <tr>
+        <td>Clock Speed (GHz)</td>
+        <td>2.5</td>
+    </tr>
+    <tr>
+        <td>CPU Architecture</td>
+        <td>x86_64</td>
+    </tr>
+    <tr>
+        <td>GPU</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>GPU Architecture</td>
+        <td>nvidia t4 tensor core</td>
+    </tr>
+    <tr>
+        <td>Video Memory (GiB)</td>
+        <td>16</td>
+    </tr>
+    <tr>
+        <td>GPU Compute Capability (?)</td>
+        <td>7.5</td>
+    </tr>
+    <tr>
+        <td>FPGA</td>
+        <td>0</td>
+    </tr>
+</table>
+
 
 Matrix multiplication is a fundamental operation in many financial computations. Given two dense matrices 𝐴 and 𝐵 of dimensions 𝑀×𝐾 and 𝐾×𝑁, respectively, the goal is to compute their dot product 𝐶=𝐴.𝐵, also known as matmul. The dot product is defined as:
 
