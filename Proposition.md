@@ -108,50 +108,14 @@ Matrix multiplication is a fundamental operation in many financial computations.
 
 **Single-core CPU and GPU:**
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        .legend {
-            display: inline-block;
-            margin-right: 20px;
-        }
-        .cpu {
-            width: 20px;
-            height: 2px;
-            background-color: green;
-            display: inline-block;
-            margin-right: 5px;
-        }
-        .gpu {
-            width: 20px;
-            height: 2px;
-            background-color: blue;
-            display: inline-block;
-        }
-    </style>
-</head>
-<body>
-    <div class="legend">
-        <div class="cpu"></div>
-        CPU
-    </div>
-    <div class="legend">
-        <div class="gpu"></div>
-        GPU
-    </div>
-</body>
-</html>
-
-
+![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/legend.png?raw=true) <br>
 ![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/1-GPU%20and%20single-core%20CPU.png?raw=true)
-
 
 Most of the cores are idle showing low parallelism. Since the whole chip is equipped with many cores, the resources of each core are less than the single core of the CPU, so performance is poor and the overall computing time is long. With the increase of data size, as is shown in Fig. 13 the degree of parallelism in data processing in the GPU is increased and the GPU efficiency has a distinct advantage over the CPU.
 
 **Multi-core CPU and GPU :**
 
+![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/legend.png?raw=true) <br>
 ![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/2%20core%20cpu.png?raw=true)
 
 As the size of the matrix increases, the computing efficiency of the multi-core GPU increases rapidly while the CPU maintains a relatively low computing efficiency.
@@ -160,6 +124,7 @@ As the size of the matrix increases, the computing efficiency of the multi-core 
 
 Following study compares Tensorflow's performance testing on CPU and GPU computing platforms, for matrix multiplication of the Tensorflow CPU version and the matrix multiplication accelerated ratio curve of the GPU version. 
 
+![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/legend.png?raw=true) <br>
 ![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/3%20GPU%20CPU%20speed%20up.png?raw=true)
 
 
