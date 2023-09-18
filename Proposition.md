@@ -17,7 +17,7 @@ In contrast, CPUs prioritize low-latency calculations and rely on complex contro
 
 ![alt text](https://github.com/sandeep20162017/GPUAccelaration/blob/main/cpu%20and%20gpu.jpg?raw=true)
 
-**Why GPU : Contribution to GPU's Computational Power:**
+**Why GPU :**
 
  **Parallelism:** The abundance of cores in a GPU enables massive parallelism. Each core can perform its calculations independently, allowing the GPU to handle thousands of parallel threads simultaneously. This parallelism is particularly advantageous for tasks like matrix multiplication, where many calculations can be executed concurrently, leading to significant speedup.
 
@@ -171,7 +171,7 @@ Amazon G4dn Instances. Available online: [Amazon G4dn Instances](https://aws.ama
 
 ## Contact Information
 
-For inquiries related to this research paper, please contact:
+For inquiries related to this study/POC paper, please contact:
 
 - [Sandeep Kanao]
 - [Sandeep.kanao@gmail.com]
